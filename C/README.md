@@ -56,7 +56,7 @@ gcc 01_grocery_bill.c -o grocery_bill
 On Windows, run the generated program with:
 
 ```powershell
-.\\grocery_bill.exe
+.\grocery_bill.exe
 ```
 
 For exercises that use `ceil()` (13 and 16), link the math library when using GCC:
