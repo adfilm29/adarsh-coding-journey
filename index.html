@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adarsh's coding journey: learning C, Python, Java, DSA and web development.">
+  <title>Adarsh | Coding Journey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">&lt;/&gt;</span> adarsh.dev</a>
+    <nav aria-label="Main navigation">
+      <a href="#roadmap">Roadmap</a>
+      <a href="#tracker">Progress</a>
+      <a href="#resources">Resources</a>
+    </nav>
+    <a class="github-link" href="https://github.com/adfilm29/adarsh-coding-journey" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE LEARNING LOG · 2026</p>
+        <h1>One line of code<br>at a <span>time.</span></h1>
+        <p class="intro">A public record of my journey from programming fundamentals to building real-world projects. Learning by doing, practising every day, and keeping track of the progress.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#roadmap">Explore my roadmap <span>→</span></a>
+          <a class="text-link" href="https://github.com/adfilm29" target="_blank" rel="noreferrer">My GitHub profile ↗</a>
+        </div>
+      </div>
+      <div class="code-card" aria-label="Example code snippet">
+        <div class="code-top"><span></span><span></span><span></span><small>hello_world.c</small></div>
+        <pre><code><i>// Every expert starts here</i>
+<span class="purple">#include</span> <span class="green">&lt;stdio.h&gt;</span>
+
+<span class="blue">int</span> main() {
+    printf(<span class="yellow">"Hello, world!\n"</span>);
+    printf(<span class="yellow">"Keep learning.\n"</span>);
+    <span class="purple">return</span> 0;
+}</code></pre>
+        <div class="code-foot"><span class="status-dot"></span> Compiling ideas into reality</div>
+      </div>
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+    </section>
+
+    <section class="stats" aria-label="Learning goals">
+      <div><strong>05</strong><span>Core learning tracks</span></div>
+      <div><strong>30</strong><span>Days to build a habit</span></div>
+      <div><strong>01</strong><span>Rule: practise daily</span></div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE GAME PLAN</p><h2>My learning roadmap</h2></div>
+        <p>Build strong fundamentals first. Then use them to solve problems and create useful things.</p>
+      </div>
+      <div class="roadmap-grid">
+        <article class="track-card featured"><div class="track-number">01</div><div class="track-icon">C</div><h3>C Programming</h3><p>Logic, variables, conditions, loops, functions, arrays and pointers.</p><a href="C/README.md">Open learning folder ↗</a><span class="track-tag">START HERE</span></article>
+        <article class="track-card"><div class="track-number">02</div><div class="track-icon python">Py</div><h3>Python</h3><p>Syntax, data structures, functions, files and small automation projects.</p><a href="Python/README.md">Open learning folder ↗</a></article>
+        <article class="track-card"><div class="track-number">03</div><div class="track-icon java">J</div><h3>Java & OOP</h3><p>Classes, objects, inheritance, polymorphism and clean program design.</p><a href="Java/README.md">Open learning folder ↗</a></article>
+        <article class="track-card"><div class="track-number">04</div><div class="track-icon dsa">{} </div><h3>Data Structures & Algorithms</h3><p>Arrays, strings, searching, sorting, recursion and problem-solving practice.</p><a href="DSA/README.md">Open learning folder ↗</a></article>
+        <article class="track-card"><div class="track-number">05</div><div class="track-icon web">⌘</div><h3>Web Development</h3><p>HTML, CSS and JavaScript—turning ideas into interactive websites.</p><a href="Web-Development/README.md">Open learning folder ↗</a></article>
+        <article class="track-card project-card"><div class="track-icon">✳</div><h3>Build real projects</h3><p>Apply what I learn by creating, testing and improving useful applications.</p><a href="Projects/README.md">Explore projects ↗</a></article>
+      </div>
+    </section>
+
+    <section class="progress-section" id="tracker">
+      <div class="section-heading">
+        <div><p class="eyebrow">SMALL STEPS ADD UP</p><h2>My practice tracker</h2></div>
+        <p>Tick a day after completing a focused coding session. Your progress is saved in this browser.</p>
+      </div>
+      <div class="tracker">
+        <div class="tracker-summary"><div><span class="muted">DAYS COMPLETED</span><strong id="completed-count">0 <small>/ 30</small></strong></div><div class="progress-bar"><span id="progress-fill"></span></div><p id="progress-message">Start with day one. Consistency beats intensity.</p></div>
+        <div class="day-grid" id="day-grid" aria-label="30-day practice checklist"></div>
+        <div class="tracker-actions"><button id="reset-progress" class="reset-button" type="button">Reset progress</button><span id="progress-percent">0% complete</span></div>
+      </div>
+      <p class="fine-print">This tracker uses your browser's local storage. It does not upload personal data.</p>
+    </section>
+
+    <section class="section resources-section" id="resources">
+      <div class="section-heading"><div><p class="eyebrow">LEARN FROM THE SOURCE</p><h2>Useful resources</h2></div><p>Reliable references to use alongside practice.</p></div>
+      <div class="resource-list">
+        <a href="https://devdocs.io/" target="_blank" rel="noreferrer"><span class="resource-symbol">⌘</span><span><b>DevDocs</b><small>Documentation for many programming languages</small></span><span class="arrow">↗</span></a>
+        <a href="https://www.learn-c.org/" target="_blank" rel="noreferrer"><span class="resource-symbol">C</span><span><b>Learn-C.org</b><small>Interactive C programming lessons</small></span><span class="arrow">↗</span></a>
+        <a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noreferrer"><span class="resource-symbol">Py</span><span><b>Python documentation</b><small>The official Python tutorial</small></span><span class="arrow">↗</span></a>
+        <a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer"><span class="resource-symbol">M</span><span><b>MDN Web Docs</b><small>Web standards, HTML, CSS and JavaScript</small></span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">&lt;/&gt;</span> adarsh.dev</a><p>Built while learning. Improved with every commit.</p><a href="https://github.com/adfilm29/adarsh-coding-journey" target="_blank" rel="noreferrer">View source on GitHub ↗</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
