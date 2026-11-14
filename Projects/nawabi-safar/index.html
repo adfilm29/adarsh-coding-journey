@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101312">
+  <meta name="description" content="Discover Lucknow and build a personal city itinerary with Nawabi Safar.">
+  <title>Nawabi Safar | Lucknow, Your Way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">NS</span><span>NAWABI <b>SAFAR</b><small>LUCKNOW, YOUR WAY</small></span></a>
+    <nav><a href="#discover">Discover</a><a href="#planner">Trip planner</a><a href="#food">Food trail</a></nav>
+    <button class="saved-pill" id="savedButton">♡ Saved trip <b id="savedCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">THE CITY OF TEHZEEB & TASTE</p>
+        <h1>Lucknow is not<br>just a place. It’s a <em>feeling.</em></h1>
+        <p class="intro">From grand gateways to hidden food lanes, build a Lucknow experience that moves at your pace.</p>
+        <div class="actions"><a class="button primary" href="#planner">Plan my safar ↗</a><a class="underlink" href="#discover">Explore the city ↓</a></div>
+        <div class="stats"><div><b>250+</b><small>Years of stories</small></div><i></i><div><b>1 city</b><small>Endless experiences</small></div></div>
+      </div>
+      <div class="hero-art" aria-label="Stylised illustration of a Lucknow heritage arch">
+        <div class="arch-glow"></div><div class="arch"><div class="arch-inner"><div class="door"></div><div class="window"></div></div></div>
+        <div class="art-caption"><span>26.8467° N · 80.9462° E</span><b>THE CITY OF NAWABS</b></div>
+        <div class="note">A little history.<br><em>A lot of heart.</em></div>
+      </div>
+    </section>
+
+    <section class="searchbar">
+      <div><b>Find your next stop</b><small>Search places, categories or neighbourhoods</small></div>
+      <input id="searchInput" type="search" placeholder="Try “history”, “park” or “Bara Imambara”" aria-label="Search destinations">
+      <a href="#discover" class="search-go">→</a>
+    </section>
+
+    <section class="section" id="discover">
+      <div class="section-head"><div><p class="eyebrow">CURATED FOR THE CURIOUS</p><h2>Discover <em>Lucknow</em></h2><p class="muted">A few iconic stops to get your story started.</p></div><a class="underlink" href="#planner">Build an itinerary ↗</a></div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="All">All places</button>
+        <button class="filter" data-category="Heritage">Heritage</button>
+        <button class="filter" data-category="Culture">Culture</button>
+        <button class="filter" data-category="Nature">Nature</button>
+        <button class="filter" data-category="Shopping">Shopping</button>
+      </div>
+      <div class="place-grid" id="placeGrid"></div>
+      <p class="empty hidden" id="emptyMessage">No places match that search. Try another keyword.</p>
+    </section>
+
+    <section class="planner" id="planner">
+      <div class="section-head"><div><p class="eyebrow">YOUR DAY, YOUR RULES</p><h2>Build your <em>safar.</em></h2><p class="muted">Choose your stops. We’ll help shape the day.</p></div><span class="tag">✦ PERSONAL TRIP BUILDER</span></div>
+      <div class="planner-grid">
+        <div class="itinerary panel">
+          <div class="panel-head"><div><b>Your itinerary</b><small id="itineraryCount">No stops added yet</small></div><button id="clearTrip" class="quiet">Clear all</button></div>
+          <div id="itineraryList" class="itinerary-list"><div class="empty-itinerary"><span>✧</span><b>Your story starts here.</b><p>Add places from Discover to create your own Lucknow itinerary.</p></div></div>
+          <div class="panel-foot"><small>✦ Your plan is saved on this device.</small><button class="button primary" id="saveTrip">Save my safar ↗</button></div>
+        </div>
+        <aside class="summary panel">
+          <p class="eyebrow">THE PLAN AT A GLANCE</p><h3>Trip <em>summary</em></h3>
+          <div class="metric"><span>Places selected</span><b id="summaryPlaces">0</b></div>
+          <div class="metric"><span>Estimated time</span><b id="summaryTime">0 hrs</b></div>
+          <div class="metric"><span>Estimated entry spend</span><b id="summaryCost">₹0</b></div>
+          <hr>
+          <label for="budgetInput">Your total budget (₹)</label><input id="budgetInput" class="budget-input" type="number" min="0" value="1500">
+          <div class="meter"><div id="budgetMeter"></div></div><p id="budgetNote" class="budget-note">Add places to see how your budget looks.</p>
+          <button class="button outline" id="copyTrip">Copy itinerary</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section food" id="food">
+      <div class="section-head"><div><p class="eyebrow">A CITY BEST EXPLORED HUNGRY</p><h2>Follow the <em>flavour.</em></h2><p class="muted">A starter list of dishes that belong on a Lucknow food trail.</p></div></div>
+      <div class="food-grid">
+        <article><span>🍢</span><small>THE CLASSIC</small><h3>Galouti Kebab</h3><p>Soft, aromatic kebabs with a rich Awadhi legacy.</p></article>
+        <article><span>🍚</span><small>THE COMFORT</small><h3>Awadhi Biryani</h3><p>Fragrant rice layered with slow-cooked spices.</p></article>
+        <article><span>🥣</span><small>THE MORNING RITUAL</small><h3>Basket Chaat</h3><p>A crisp, tangy bite with a little bit of everything.</p></article>
+        <article><span>🍮</span><small>THE SWEET ENDING</small><h3>Malai Gilori</h3><p>A delicate local sweet worth saving room for.</p></article>
+      </div>
+      <p class="fine-print">Food suggestions are cultural highlights, not live restaurant listings. Check current opening hours and availability before visiting.</p>
+    </section>
+    <section class="closing"><div><p class="eyebrow">THE BEST STORIES ARE MADE OUT THERE</p><h2>Go slow. Look closer.<br><em>Feel Lucknow.</em></h2></div><a class="button light" href="#planner">Plan your safar ↗</a></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">NS</span><span>NAWABI <b>SAFAR</b><small>AN INDEPENDENT STUDENT PROJECT</small></span></a><p>Made with curiosity in Lucknow · © 2026 Nawabi Safar</p></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
