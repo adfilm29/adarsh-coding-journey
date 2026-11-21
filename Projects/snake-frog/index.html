@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1714">
+  <meta name="description" content="Snake & Frog — a polished arcade game. Guide the snake, catch flies, avoid the frog, and beat your best score.">
+  <title>Snake & Frog — Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Snake and Frog home"><span class="brand-mark">S<span>•</span>F</span><span>ARCADE<span class="brand-sub">PIXEL PLAYGROUND</span></span></a>
+      <div class="top-meta"><span class="live-dot"></span> ARCADE MODE <span class="divider">/</span> <span id="statusText">READY TO PLAY</span></div>
+    </header>
+    <section class="intro">
+      <div class="eyebrow"><span>01</span> CLASSIC ARCADE · NEW TWIST</div>
+      <h1>Snake <span class="amp">&</span> <span class="frog-word">Frog.</span></h1>
+      <p>One hungry snake. One sneaky frog. A whole garden of trouble.</p>
+    </section>
+    <section class="game-layout" aria-label="Game area">
+      <div class="game-column">
+        <div class="scorebar">
+          <div class="score-card"><span class="stat-label">YOUR SCORE</span><strong id="score">000</strong></div>
+          <div class="score-card best-card"><span class="stat-label">PERSONAL BEST</span><strong id="best">000</strong></div>
+          <div class="level-chip"><span class="level-dot"></span><span id="level">LEVEL 01</span></div>
+        </div>
+        <div class="board-frame">
+          <div class="board-head"><span><i></i> GARDEN GRID</span><span id="gameState">PRESS START</span></div>
+          <div class="canvas-wrap">
+            <canvas id="gameCanvas" width="600" height="600" aria-label="Snake and Frog game board"></canvas>
+            <div class="overlay" id="overlay">
+              <div class="overlay-card">
+                <div class="overlay-icon" id="overlayIcon">🐍</div>
+                <div class="overlay-kicker" id="overlayKicker">A LITTLE ARCADE MAGIC</div>
+                <h2 id="overlayTitle">Ready, player?</h2>
+                <p id="overlayMessage">Collect the glowing flies. Watch out for the frog — and your own tail.</p>
+                <button class="primary-btn" id="overlayButton">START GAME <span>↗</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="board-foot"><span><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> MOVE</span><span><kbd>SPACE</kbd> PAUSE</span><span><kbd>R</kbd> RESTART</span></div>
+        </div>
+        <div class="mobile-controls" aria-label="Touch controls">
+          <button class="dpad up" data-dir="up" aria-label="Move up">↑</button><button class="dpad left" data-dir="left" aria-label="Move left">←</button><button class="dpad down" data-dir="down" aria-label="Move down">↓</button><button class="dpad right" data-dir="right" aria-label="Move right">→</button>
+        </div>
+      </div>
+      <aside class="side-panel">
+        <div class="panel-section">
+          <div class="panel-heading"><span>GAME CONTROL</span><span class="tiny-index">A / 01</span></div>
+          <button class="control-btn start-control" id="startButton"><span class="btn-symbol">▶</span><span><b>Start game</b><small>Let's get moving</small></span><span class="btn-arrow">↗</span></button>
+          <button class="control-btn" id="pauseButton" disabled><span class="btn-symbol">Ⅱ</span><span><b>Pause game</b><small>Take a breather</small></span><span class="btn-arrow">Ⅱ</span></button>
+          <button class="control-btn" id="restartButton"><span class="btn-symbol">↻</span><span><b>Restart</b><small>Fresh round, fresh luck</small></span><span class="btn-arrow">↗</span></button>
+        </div>
+        <div class="panel-section settings">
+          <div class="panel-heading"><span>YOUR SETTINGS</span><span class="tiny-index">B / 02</span></div>
+          <label class="setting-row" for="difficulty"><span><b>Difficulty</b><small>Set your pace</small></span><select id="difficulty"><option value="easy">Easy</option><option value="normal" selected>Normal</option><option value="hard">Hard</option></select></label>
+          <label class="setting-row" for="soundToggle"><span><b>Sound effects</b><small>Arcade sounds on/off</small></span><input id="soundToggle" type="checkbox" checked><span class="switch"></span></label>
+        </div>
+        <div class="howto">
+          <div class="panel-heading"><span>HOW TO PLAY</span><span class="tiny-index">C / 03</span></div>
+          <div class="tip"><span class="tip-icon fly-icon">✦</span><p><b>Catch the flies</b><small>Each fly adds 10 points and grows your snake.</small></p></div>
+          <div class="tip"><span class="tip-icon frog-icon">🐸</span><p><b>Dodge the frog</b><small>The frog moves around the garden. Don't touch it!</small></p></div>
+          <div class="tip"><span class="tip-icon wall-icon">↗</span><p><b>Stay in bounds</b><small>Walls and your own tail end the run.</small></p></div>
+        </div>
+        <div class="quote-card"><span class="quote-mark">“</span><p>Slow moves. Sharp turns.<br>Big scores.</p><span class="quote-caption">THE GARDEN RULES</span></div>
+      </aside>
+    </section>
+    <footer><span>DESIGNED FOR THE JOY OF PLAY.</span><span>ADFILM<span class="footer-dot">.</span>29 <span class="footer-year">© 2026</span></span></footer>
+  </main>
+</body>
+</html>
